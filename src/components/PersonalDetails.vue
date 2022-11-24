@@ -1,5 +1,5 @@
 <script>
-import form from './onboarding.json';
+import form from './src/JSON/onboarding.json';
 export default{
     data(){
         return{
