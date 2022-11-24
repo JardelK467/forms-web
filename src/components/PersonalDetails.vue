@@ -11,7 +11,7 @@ export default{
 
 <template>
 
-	<h1>{{ "Hello" }}</h1>
+	<h1>{{ form.name }}</h1>
 	<form>
 		<div v-for="stage in data" :key="stage.name">
 			<h2>{{ stage.label }}</h2>
