@@ -13,7 +13,6 @@
 			</div>
 		</div>
 	</form>
-	<pre>{{ form }}</pre>
 </template>
 
 <script setup lang="ts">
