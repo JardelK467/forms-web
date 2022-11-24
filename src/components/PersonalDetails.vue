@@ -1,5 +1,5 @@
 
-<template>
+<!-- <template>
 	<h1>{{ form.name }}</h1>
 	<form>
 		<div v-for="stage in form.stages" :key="stage.name">
@@ -51,6 +51,5 @@ input{
     border-bottom: 1px solid #ddd;
     color: #555;
 }
-</style>
-
+</style>-->
 
