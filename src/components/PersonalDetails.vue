@@ -1,8 +1,6 @@
 <script>
 import form from './onboarding.json';
-export default
-{form}
-
+export default{form}
 </script>
 
 <template>
