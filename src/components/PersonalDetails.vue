@@ -1,21 +1,17 @@
 <script>
-import form from './src/JSON/onboarding.json';
-export default{
-    data(){
-        return{
-            data: form
-        }
-    }
-}
+import form from './onboarding.json';
+export default
+{form}
+
 </script>
 
 <template>
 
 	<h1>{{ form.name }}</h1>
 	<form>
-		<div v-for="stage in data" :key="stage.name">
+		<div v-for="stage in form.stages" :key="stage.name">
 			<h2>{{ stage.label }}</h2>
-			<div v-for="group in data" :key="group.name" style="border: 1px solid">
+			<div v-for="group in stages.groups" :key="group.name" style="border: 1px solid">
 				<h3>{{ group.label }}</h3>
 			</div>
 		</div>
