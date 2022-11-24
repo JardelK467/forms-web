@@ -1,16 +1,16 @@
-<template>
+<!-- <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <PersonalDetails />
+  <FormTest />
 </template>
 
 <script>
-import PersonalDetails from './components/PersonalDetails.vue'
+import FormTest from './components/FormTest.vue'
 
 
 export default {
   name: 'App',
   components: {
-    PersonalDetails
+    FormTest
   }
 }
 </script>
@@ -24,4 +24,4 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-</style>
+</style> -->
