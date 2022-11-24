@@ -64,5 +64,4 @@ export default {
       :schema="schema"
     />
   </FormKit>
-  <pre wrap>{{ data }}</pre>
 </template>
