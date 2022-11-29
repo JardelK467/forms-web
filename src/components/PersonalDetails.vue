@@ -1,54 +1,65 @@
-
-<!-- <template>
-	<h1>{{ form.name }}</h1>
-	<form>
-		<div v-for="stage in form.stages" :key="stage.name">
-			<h2>{{ stage.label }}</h2>
-			<div v-for="group in stage.groups" :key="group.name" style="border: 1px solid">
-				<h3>{{ group.label }}</h3>
-                <div v-for="question in group.questions" :key="question.name">
-                    <h4>{{question.label}}</h4>
-                    <input type="string" placeholder="placeholder"  />
-                </div>
-			</div>
-		</div>
-	</form>
-</template>
-
-<script setup lang="ts">
-const form = JSON.parse(
-    '{"name":"Onboarding","conditions":[{"name":"9ee8f098-d6d8-4136-8325-5c3eb356753e","path":"personal_info.name._.given","operator":"Eq","literal":"Rob"}],"stages":[{"name":"capture","label":"Let\'s get started","condition":null,"groups":[{"name":"lead","label":"Please put in your details below","sort_rank":1,"display_method":null,"minimum_occurrences":1,"maximum_occurrences":1,"questions":[{"name":"email","label":"Email","placeholder":"Type your email here","input_type":"TextEmail","optional":false,"sort_rank":1,"condition":null}]}]},{"name":"personal_info","label":"Your details","condition":null,"groups":[{"name":"name","label":null,"sort_rank":1,"display_method":null,"minimum_occurrences":1,"maximum_occurrences":1,"questions":[{"name":"given","label":"What is your first name?","placeholder":"Type your first name here","input_type":"Text","optional":false,"sort_rank":1,"condition":null},{"name":"surname","label":"What is your surname?","placeholder":"Type your surname here","input_type":"Text","optional":false,"sort_rank":1,"condition":null}]},{"name":"personal_info","label":null,"sort_rank":1,"display_method":null,"minimum_occurrences":1,"maximum_occurrences":1,"questions":[{"name":"nationality","label":"What is your nationality?","placeholder":"Please select your nationality","input_type":"DropdownCountry","optional":false,"sort_rank":1,"condition":null}]},{"name":"phone_numbers","label":null,"sort_rank":1,"display_method":null,"minimum_occurrences":1,"maximum_occurrences":1,"questions":[{"name":"phone","label":"What is your phone number?","placeholder":"Please include country code","input_type":"TextPhoneNum","optional":false,"sort_rank":1,"condition":null}]}]},{"name":"crime_prevention","label":"A few more things","condition":"9ee8f098-d6d8-4136-8325-5c3eb356753e","groups":[{"name":"affidavit","label":null,"sort_rank":1,"display_method":null,"minimum_occurrences":1,"maximum_occurrences":1,"questions":[{"name":"never_done_crimes","label":"I have never done crimes","placeholder":"","input_type":"BoolCheckbox","optional":false,"sort_rank":1,"condition":null},{"name":"will_never_crimes","label":"I do not intend to do crimes","placeholder":"","input_type":"BoolCheckbox","optional":true,"sort_rank":1,"condition":null}]}]}]}'
-);
-  
+ <script setup>
+import form from "./onboarding.json";
+import Email from "./Inputs/Email.vue";
+import InputText from "./Inputs/InputText.vue";
+import Dropdown from "./Inputs/Dropdown.vue";
+import Checkbox from "./Inputs/CheckBox.vue";
+import PhoneNum from "./Inputs/Telephone.vue";
 </script>
 
+<template>
+  <h1>{{ form.name }}</h1>
+  <form>
+    <div v-for="stage in form.stages" :key="stage.name">
+      <h2>{{ stage.label }}</h2>
+      <div v-for="group in stage.groups" :key="group.name">
+        <h3>{{ group.label }}</h3>
+        <div v-for="question in group.questions" :key="question.name">
+          <div>
+            <h4>{{ question.label }}</h4>
+            <Email v-if="question.input_type === 'TextEmail'" />
+            <InputText v-if="question.input_type === 'Text'" />
+            <Dropdown v-if="question.input_type === 'DropdownCountry'" />
+            <PhoneNum v-if="question.input_type === 'TextPhoneNum'" />
+            <CheckBox v-if="question.input_type === 'BoolCheckbox'" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <input type="submit" value="Submit" />
+    </div>
+  </form>
+</template>
+
+
+
 <style>
-form{
-    max-width: 430px;
-    margin: 30px auto;
-    text-align: left;
-    padding: 40px;
-    border-radius: 10px;
+form {
+  max-width: 430px;
+  margin: 30px auto;
+  text-align: left;
+  padding: 40px;
+  border-radius: 10px;
 }
-label{
-
-    color: #aaa;
-    display: inline-block;
-    margin: 25px 0 15px;
-    font-size: 0.6em;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: bold;
+label {
+  color: #aaa;
+  display: inline-block;
+  margin: 25px 0 15px;
+  font-size: 0.6em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
 }
 
-input{
-    display: block;
-    padding: 10px 6px;
-    width:100%;
-    box-sizing: border-box;
-    border: none;
-    border-bottom: 1px solid #ddd;
-    color: #555;
+input {
+  display: block;
+  padding: 10px 6px;
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  color: #555;
 }
 </style>-->
 
