@@ -1,21 +1,18 @@
  <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  
+  <img alt="Vue logo" src="./assets/logo.png" />
+
   <PersonalDetails />
 </template>
 
 <script>
-import FormTest from './components/FormTest.vue'
-import PersonalDetails from './components/PersonalDetails.vue'
-
+import PersonalDetails from "./components/PersonalDetails.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    FormTest,
-    PersonalDetails
-  }
-}
+    PersonalDetails,
+  },
+};
 </script>
 
 <style>
