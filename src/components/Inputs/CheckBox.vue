@@ -1,9 +1,7 @@
 <template>
   <div id="checkboxes">
-    <label for="true"> True </label>
-    <input type="checkbox" id="true" v-model="props.label" />
-    <label for="false"> False </label>
-    <input type="checkbox" id="false" v-model="props.label" />
+    <label for="label"> {{ props.label }} </label>
+    <input type="checkbox" id="label" v-model="props.criminal" />
   </div>
 </template>
   
@@ -12,5 +10,6 @@ const props = defineProps({
   input_type: String,
   label: String,
   placeholder: String,
+  criminal: false,
 });
 </script> 

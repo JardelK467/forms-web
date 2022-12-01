@@ -5,6 +5,7 @@ import InputText from "./Inputs/InputText.vue";
 import Dropdown from "./Inputs/Dropdown.vue";
 import Checkbox from "./Inputs/CheckBox.vue";
 import PhoneNum from "./Inputs/Telephone.vue";
+import { placeholder } from "@babel/types";
 </script>
 
 <template>
@@ -17,11 +18,26 @@ import PhoneNum from "./Inputs/Telephone.vue";
         <div v-for="question in group.questions" :key="question.name">
           <div>
             <h4>{{ question.label }}</h4>
-            <Email v-if="question.input_type === 'TextEmail'" />
-            <InputText v-if="question.input_type === 'Text'" />
-            <Dropdown v-if="question.input_type === 'DropdownCountry'" />
-            <PhoneNum v-if="question.input_type === 'TextPhoneNum'" />
-            <CheckBox v-if="question.input_type === 'BoolCheckbox'" />
+            <Email
+              v-if="question.input_type === 'TextEmail'"
+              :placeholder="question.placeholder"
+            />
+            <InputText
+              v-if="question.input_type === 'Text'"
+              :placeholder="question.placeholder"
+            />
+            <Dropdown
+              v-if="question.input_type === 'DropdownCountry'"
+              :placeholder="question.placeholder"
+            />
+            <PhoneNum
+              v-if="question.input_type === 'TextPhoneNum'"
+              :placeholder="question.placeholder"
+            />
+            <input
+              type="checkbox"
+              v-if="question.input_type === 'BoolCheckbox'"
+            />
           </div>
         </div>
       </div>
@@ -61,5 +77,12 @@ input {
   border-bottom: 1px solid #ddd;
   color: #555;
 }
-</style>-->
+input[type="checkbox"] {
+  display: inline-block;
+  width: 16px;
+  margin: 0 10px 0 0;
+  position: relative;
+  top: 2px;
+}
+</style>
 
