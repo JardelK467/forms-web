@@ -13,26 +13,34 @@ import { placeholder } from "@babel/types";
   <form>
     <div v-for="stage in form.stages" :key="stage.name">
       <h2>{{ stage.label }}</h2>
-      <div v-for="group in stage.groups" :key="group.name">
+      <div id="groups" v-for="group in stage.groups" :key="group.name">
         <h3>{{ group.label }}</h3>
-        <div v-for="question in group.questions" :key="question.name">
-          <div>
+        <div
+          id="questions"
+          v-for="question in group.questions"
+          :key="question.name"
+        >
+          <div id="labels">
             <h4>{{ question.label }}</h4>
             <Email
               v-if="question.input_type === 'TextEmail'"
               :placeholder="question.placeholder"
+              required
             />
             <InputText
               v-if="question.input_type === 'Text'"
               :placeholder="question.placeholder"
+              required
             />
             <Dropdown
               v-if="question.input_type === 'DropdownCountry'"
               :placeholder="question.placeholder"
+              required
             />
             <PhoneNum
               v-if="question.input_type === 'TextPhoneNum'"
               :placeholder="question.placeholder"
+              required
             />
             <input
               type="checkbox"
@@ -53,15 +61,15 @@ import { placeholder } from "@babel/types";
 <style>
 form {
   max-width: 430px;
-  margin: 30px auto;
+  margin: auto;
   text-align: left;
   padding: 40px;
   border-radius: 10px;
 }
-label {
+#ßlabels {
   color: #aaa;
   display: inline-block;
-  margin: 25px 0 15px;
+  margin: auto;
   font-size: 0.6em;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -83,6 +91,21 @@ input[type="checkbox"] {
   margin: 0 10px 0 0;
   position: relative;
   top: 2px;
+}
+#questions {
+  border-radius: 25px;
+  border: 2px solid;
+  padding: 20px;
+  width: 700px;
+  max-height: fit-content;
+  margin: 25px 0 15px;
+}
+#test {
+  margin-left: auto;
+}
+
+#groups {
+  margin-left: auto;
 }
 </style>
 
