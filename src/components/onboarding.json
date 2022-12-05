@@ -24,7 +24,7 @@
           "questions": [
             {
               "name": "email",
-              "label": "Email",
+              "label": "Email*",
               "placeholder": "Type your email here",
               "input_type": "TextEmail",
               "optional": false,
@@ -50,7 +50,7 @@
           "questions": [
             {
               "name": "given",
-              "label": "What is your first name?",
+              "label": "What is your first name?*",
               "placeholder": "Type your first name here",
               "input_type": "Text",
               "optional": false,
@@ -59,7 +59,7 @@
             },
             {
               "name": "surname",
-              "label": "What is your surname?",
+              "label": "What is your surname?*",
               "placeholder": "Type your surname here",
               "input_type": "Text",
               "optional": false,
@@ -78,7 +78,7 @@
           "questions": [
             {
               "name": "nationality",
-              "label": "What is your nationality?",
+              "label": "What is your nationality?*",
               "placeholder": "Please select your nationality",
               "input_type": "DropdownCountry",
               "optional": false,
@@ -97,7 +97,7 @@
           "questions": [
             {
               "name": "phone",
-              "label": "What is your phone number?",
+              "label": "What is your phone number?*",
               "placeholder": "Please include country code",
               "input_type": "TextPhoneNum",
               "optional": false,
@@ -123,7 +123,7 @@
           "questions": [
             {
               "name": "never_done_crimes",
-              "label": "I have never done crimes",
+              "label": "I have never done crimes*",
               "placeholder": "",
               "input_type": "BoolCheckbox",
               "optional": false,

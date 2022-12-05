@@ -1,4 +1,4 @@
- <script>
+ <script setup>
 import form from "./onboarding.json";
 import Email from "./Inputs/Email.vue";
 import InputText from "./Inputs/InputText.vue";

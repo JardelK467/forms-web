@@ -1,5 +1,11 @@
 <template>
-  <input type="tel" :placeholder="props.placeholder" />
+  <input
+    type="tel"
+    :placeholder="props.placeholder"
+    size="20"
+    minlength="9"
+    maxlength="14"
+  />
 </template>
 
 <script setup>

@@ -1,5 +1,5 @@
  <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
+  <img alt="Vue logo" src="./assets/bootlegBTlogo.jpeg" />
 
   <PersonalDetails />
 </template>
@@ -22,6 +22,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  background: blanchedalmond;
 }
 </style> 
