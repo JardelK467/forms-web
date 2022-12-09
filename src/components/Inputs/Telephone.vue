@@ -1,17 +1,22 @@
 <template>
-  <input
-    type="tel"
-    :placeholder="props.placeholder"
-    size="20"
-    minlength="9"
-    maxlength="14"
-  />
+	<input
+		type="tel"
+		id="tel"
+		:placeholder="props.placeholder"
+		size="20"
+		minlength="9"
+		maxlength="14"
+		:value="props.modelValue"
+		@input="emit('update:modelValue', $event.target.value)"
+		required
+	/>
 </template>
 
 <script setup>
 const props = defineProps({
-  input_type: String,
-  label: String,
-  placeholder: String,
+	modelValue: String,
+	input_type: String,
+	placeholder: String,
 });
+const emit = defineEmits(['update:modelValue']);
 </script>
