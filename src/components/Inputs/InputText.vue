@@ -1,13 +1,21 @@
 <template>
-  <div id="fullname">
-    <input type="text" :placeholder="props.placeholder" />
-  </div>
+	<div id="fullname">
+		<input
+			type="text"
+			id="textinput"
+			:placeholder="props.placeholder"
+			:value="props.modelValue"
+			@input="emit('update:modelValue', $event.target.value)"
+			required
+		/>
+	</div>
 </template>
 
 <script setup>
 const props = defineProps({
-  input_type: String,
-  label: String,
-  placeholder: String,
+	modelValue: String,
+	input_type: String,
+	placeholder: String,
 });
+const emit = defineEmits(['update:modelValue']);
 </script>

@@ -1,12 +1,19 @@
 <template>
-  <div id="checkboxes">
-    <input type="checkbox" />
-  </div>
+	<div id="checkboxes">
+		<input
+			type="checkbox"
+			:value="props.modelValue"
+			@input="emit('update:modelValue', $event.target.value)"
+			required
+		/>
+	</div>
 </template>
-  
+
 <script setup>
 const props = defineProps({
-  input_type: String,
-  label: String,
+	modelValue: String,
+	input_type: String,
+	placeholder: String,
 });
-</script> 
+const emit = defineEmits(['update:modelValue']);
+</script>
