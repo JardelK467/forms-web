@@ -1,15 +1,16 @@
  <template>
 	<img alt="Vue logo" src="./assets/bootlegBTlogo.jpeg" />
-	<PersonalDetails />
+	<!-- <router-view></router-view> -->
+	<CapturePageVue />
 </template>
 
 <script>
-import PersonalDetails from './components/PersonalDetails.vue';
+import CapturePageVue from './components/CapturePage.vue';
 
 export default {
 	name: 'App',
 	components: {
-		PersonalDetails,
+		CapturePageVue,
 	},
 };
 </script>
@@ -21,6 +22,6 @@ export default {
 	-moz-osx-font-smoothing: grayscale;
 	text-align: center;
 	color: #2c3e50;
-	background: blanchedalmond;
+	background: navy;
 }
 </style> 
