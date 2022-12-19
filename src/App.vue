@@ -1,16 +1,16 @@
  <template>
 	<img alt="Vue logo" src="./assets/bootlegBTlogo.jpeg" />
 	<!-- <router-view></router-view> -->
-	<CapturePageVue />
+	<FormPage />
 </template>
 
 <script>
-import CapturePageVue from './components/CapturePage.vue';
+import FormPage from './components/FormPage.vue';
 
 export default {
 	name: 'App',
 	components: {
-		CapturePageVue,
+		FormPage,
 	},
 };
 </script>
@@ -22,6 +22,6 @@ export default {
 	-moz-osx-font-smoothing: grayscale;
 	text-align: center;
 	color: #2c3e50;
-	background: navy;
+	background: white;
 }
 </style> 
