@@ -1,13 +1,13 @@
-import Vuex from 'vuex';
-import Vue from 'vue';
+// import Vuex from 'vuex';
+// import Vue from 'vue';
 
-Vue.use(Vuex);
+// Vue.use(Vuex);
 
-export const store = new Vuex.Store({
-	state: {
-		registrations: [],
-		users: [
-			{ email: '', firstname: '', surname: '', nationality: '', tel: '', registration: false },
-		],
-	},
-});
+// export const store = new Vuex.Store({
+// 	state: {
+// 		registrations: [],
+// 		users: [
+// 			{ email: '', firstname: '', surname: '', nationality: '', tel: '', NDC: '',  registration: false },
+// 		],
+// 	},
+// });

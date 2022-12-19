@@ -46,9 +46,11 @@ import Dropdown from './Dropdown.vue';
 import PhoneNum from './Telephone.vue';
 import CheckBox from './CheckBox.vue';
 import CheckReq from './CheckReq.vue';
+
 const props = defineProps({
 	modelValue: [String, Number, Boolean],
 	question: Object,
 });
+
 const emit = defineEmits(['update:modelValue']);
 </script>
